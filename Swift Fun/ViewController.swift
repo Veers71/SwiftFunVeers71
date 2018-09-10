@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         print(buttonCount)
         if buttonCount == 10 {
         view.backgroundColor = UIColor.red
-        coolLabel.text = "Adam is learning"
+        coolLabel.text = "BOOM 10 Times!"
         
         }
     }
