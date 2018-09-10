@@ -19,6 +19,7 @@ class ViewController: UIViewController {
         if buttonCount == 10 {
         view.backgroundColor = UIColor.red
         coolLabel.text = "BOOM 10 Times!"
+        //testing GitHub commit
         
         }
     }
