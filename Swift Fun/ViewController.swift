@@ -10,21 +10,25 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var buttonCount = 0
     @IBOutlet weak var coolLabel: UILabel!
     
+    @IBOutlet weak var topText: UITextField!
+    @IBOutlet weak var bottomText: UITextField!
+    @IBOutlet weak var additionSwitch: UISwitch!
+    
     @IBAction func buttonTapped(_ sender: Any) {
-        buttonCount = buttonCount + 1
-        print(buttonCount)
-        if buttonCount == 10 {
-        view.backgroundColor = UIColor.red
-        coolLabel.text = "BOOM 10 Times!"
-        //testing GitHub commit
-            //Another GitHub commit
+        let addition = additionSwitch.isOn
+        var sum : Double
         
+        if addition {
+        sum = Double(topText.text!)! + Double(bottomText.text!)!
+            coolLabel.text = "\(topText.text!) + \(bottomText.text!) = \(sum)"
+        
+        } else {
+            sum = Double(topText.text!)! - Double(bottomText.text!)!
+            coolLabel.text = "\(topText.text!) - \(bottomText.text!) = \(sum)"
         }
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
